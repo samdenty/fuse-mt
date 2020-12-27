@@ -11,22 +11,19 @@ readme = "README.md"
 edition = "2018"
 
 [dependencies]
-async-trait = "0.1.40"
+async-trait = "0.1.42"
 fuse = "0.3.1"
 libc = "0.2"
 log = "0.4"
 time = "0.1"
 
 [dependencies.tokio]
-version = "0.2.22"
-features = [
-    "rt-core",
-    "rt-threaded",
-]
+version = "1.0.1"
+features = ["rt", "rt-multi-thread"]
 
 [features]
 default = []
-tokio-io = ["tokio/io-driver"]
+# tokio-io = ["tokio/io-driver"]
 tokio-time = ["tokio/time"]
 
 [workspace]
